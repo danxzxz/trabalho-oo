@@ -38,7 +38,6 @@ function listarCarrinho(array $carrinho) {
         }
     }
 
-    // Caso o carrinho esteja vazio, mostrar uma mensagem
     if ($i == 1) {
         echo "Carrinho vazio.\n";
     }
@@ -158,9 +157,9 @@ $comprar = array();
 
 do {
     print "\n   ------------MERCADO DA BOLA----------\n";
-    print " 1 - 💸COMPRAR JOGADOR💸\n";
-    print " 2 - 🖊️CADASTRAR JOGADOR🖊️\n";
-    print " 3 - 🛒CARRINHO🛒\n";
+    print " 1 - 💸 COMPRAR JOGADOR💸\n";
+    print " 2 - 🖊️  CADASTRAR JOGADOR 🖊️\n";
+    print " 3 - 🛒 CARRINHO 🛒\n";
     print " 0 - SAIR \n";
 
     $opcao = readline("Escolha a opção que deseja: ");
@@ -172,12 +171,6 @@ do {
             break;
 
             case 1:
-            //     echo "\n\n";
-            //     $orcamento = readline("Qual o seu orçamento?")
-
-            //     if ($orcamento > $this->multa) {
-
-            //     }
 
                 $opcao2 = 0;
                 do {
@@ -192,10 +185,10 @@ do {
                 switch ($opcao2) {
                     case 1:
                         listarAtacante($atacante);
-                        echo "========================\nCaso não tenha interesse em nenhum jogador -  PRESS 0\n========================\n";
+                        echo "\n========================\nCaso não tenha interesse em nenhum jogador -  PRESS 0\n========================\n";
                         $idx = readline("Informe o atacante que você deseja comprar: ");
                         if($idx > 0 && $idx <= count($atacante)) {
-                            $c = $atacante[$idx - 1]; // Get the selected player
+                            $c = $atacante[$idx - 1]; 
                             array_push($carrinho, $c);
                             array_splice($atacante, $idx - 1, 1);
                         echo "\nA proposta de compra foi enviada ao empresário do jogador com sucesso!\nAguarde respostas.";
@@ -206,12 +199,12 @@ do {
                         break;
                         case 2:
                             listarMeioCampo($meiocampo);
-                            echo "========================\nCaso não tenha interesse em nenhum jogador -  PRESS 0\n========================\n";
+                            echo "\n========================\nCaso não tenha interesse em nenhum jogador -  PRESS 0\n========================\n";
                             $idx = readline("Informe o meio-campo que você deseja comprar: ");
                             if($idx > 0 && $idx <= count($meiocampo)) {
-                                $c = $meiocampo[$idx - 1]; // Get the selected player
+                                $c = $meiocampo[$idx - 1]; 
                                 array_push($carrinho, $c);
-                                array_splice($meiocampo, $idx - 1, 1); // Remove from available list
+                                array_splice($meiocampo, $idx - 1, 1); 
                                 echo "\nA proposta de compra foi enviada ao empresário do jogador com sucesso!\nAguarde respostas.";
                             }
                             elseif ($idx == 0) {
@@ -222,12 +215,12 @@ do {
                         
                         case 3:
                             listarDefensor($defensor);
-                            echo "========================\nCaso não tenha interesse em nenhum jogador -  PRESS 0\n========================\n";
+                            echo "\n========================\nCaso não tenha interesse em nenhum jogador -  PRESS 0\n========================\n";
                             $idx = readline("Informe o defensor que você deseja comprar: ");
                             if($idx > 0 && $idx <= count($defensor)) {
-                                $c = $defensor[$idx - 1]; // Get the selected player
+                                $c = $defensor[$idx - 1]; 
                                 array_push($carrinho, $c);
-                                array_splice($defensor, $idx - 1, 1); // Remove from available list
+                                array_splice($defensor, $idx - 1, 1); 
                                 echo "\nA proposta de compra foi enviada ao empresário do jogador com sucesso!\nAguarde respostas.";
                             } elseif ($idx == 0) {
                                break;
@@ -236,12 +229,12 @@ do {
                             break;
                         case 4:
                             listarGoleiro($goleiro);
-                            echo "========================\nCaso não tenha interesse em nenhum jogador -  PRESS 0\n========================\n";
+                            echo "\n========================\nCaso não tenha interesse em nenhum jogador -  PRESS 0\n========================\n";
                             $idx = readline("Informe o goleiro que você deseja comprar: ");
                             if($idx > 0 && $idx <= count($goleiro)) {
-                                $c = $goleiro[$idx - 1]; // Get the selected player
+                                $c = $goleiro[$idx - 1]; 
                                 array_push($carrinho, $c);
-                                array_splice($goleiro, $idx - 1, 1); // Remove from available list
+                                array_splice($goleiro, $idx - 1, 1); 
                                 echo "\nA proposta de compra foi enviada ao empresário do jogador com sucesso!\nAguarde respostas.";
                             } elseif ($idx == 0) {
                                 break;
