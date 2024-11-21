@@ -156,18 +156,18 @@ $opcao = 0;
 $comprar = array();
 
 do {
-    print "\n   ------------MERCADO DA BOLA----------\n";
-    print " 1 - 💸 COMPRAR JOGADOR💸\n";
-    print " 2 - 🖊️  CADASTRAR JOGADOR 🖊️\n";
-    print " 3 - 🛒 CARRINHO 🛒\n";
-    print " 0 - SAIR \n";
+    echo "\n   ------------MERCADO DA BOLA----------\n";
+    echo " 1 - 💸COMPRAR JOGADOR💸\n";
+    echo " 2 - 🖊️CADASTRAR JOGADOR🖊️\n";
+    echo " 3 - 🛒 CARRINHO 🛒\n";
+    echo " 0 - SAIR \n";
 
     $opcao = readline("Escolha a opção que deseja: ");
 
     switch ($opcao) {
 
     case 0:
-            print "Encerrando..\n";
+            ecjo "Encerrando..\n";
             break;
 
             case 1:
@@ -355,7 +355,7 @@ do {
             break;
 
         default:
-            print "OPÇÃO INVÁLIDO!!";
+            echo "OPÇÃO INVÁLIDO!!";
             break;
     }
 } while ($opcao != 0);
