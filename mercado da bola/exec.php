@@ -167,7 +167,7 @@ do {
     switch ($opcao) {
 
     case 0:
-            ecjo "Encerrando..\n";
+            echo "Encerrando..\n";
             break;
 
             case 1:
